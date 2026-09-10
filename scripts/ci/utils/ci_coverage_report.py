@@ -58,15 +58,15 @@ MULTIMODAL_GEN_TEST_DIR = "python/sglang/multimodal_gen/test"
 _MM_GEN_SUBDIR_BACKENDS = {
     # Top-level helper-style tests (e.g. test_consistency_metrics.py).
     "": ("CUDA",),
-    # server/ top-level: pr-test-multimodal-gen.yml drives CUDA, pr-test-amd
-    # mirrors the same suite on AMD runners.
+    # server/ top-level: pr-test-multimodal-gen.yml drives CUDA,
+    # pr-test-amd-rocm720.yml mirrors the same suite on AMD runners.
     "server": ("CUDA", "AMD"),
     "server/musa": ("MUSA",),
     "server/ascend": ("NPU",),
     "layers": ("CUDA",),
     # unit/ are portable CPU-style unit tests. The `unit` suite also runs on
-    # ROCm (both 7.0.0 and 7.2.0), as a step of multimodal-gen-test-1-gpu-amd
-    # part 0, so they are AMD-covered too, not CUDA-only.
+    # ROCm, as a step of multimodal-gen-test-1-gpu-amd part 0, so they are
+    # AMD-covered too, not CUDA-only.
     "unit": ("CUDA", "AMD"),
     "cli": ("CUDA",),
     "manual": ("CUDA",),

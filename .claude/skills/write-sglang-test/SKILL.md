@@ -113,7 +113,7 @@ A per-commit suite name is **generated** from registration metadata as `{stage}-
 
 #### Nightly
 
-Nightly suites are listed in `NIGHTLY_SUITES` in [`test/run_suite.py`](../../../test/run_suite.py). They run via `nightly-test-nvidia.yml`, `nightly-test-amd.yml`, and `nightly-test-npu.yml`, not `pr-test.yml`.
+Nightly suites are listed in `NIGHTLY_SUITES` in [`test/run_suite.py`](../../../test/run_suite.py). They run via `nightly-test-nvidia.yml`, `nightly-test-amd-rocm720.yml`, and `nightly-test-npu.yml`, not `pr-test.yml`.
 
 CUDA nightly suites are named `nightly-test-{runner_config}` — one per machine type, holding everything that runs nightly on it. There is no per-purpose split (kernel / eval / perf / precision all share their machine's suite); `auto_partition` splits the work. Examples:
 

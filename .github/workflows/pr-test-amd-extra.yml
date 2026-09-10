@@ -10,7 +10,7 @@ name: PR Test Extra (AMD)
 # runs unconditionally on workflow_dispatch / workflow_call so it can be
 # triggered manually or chained from the AMD scheduler.
 #
-# Stage: extra-a. Each job mirrors the container bring-up of pr-test-amd.yml
+# Stage: extra-a. Each job mirrors the container bring-up of pr-test-amd-rocm720.yml
 # and dispatches `run_suite.py --hw amd --suite extra-a-test-{config}-amd`:
 #   - 1-gpu-small: mock-model / kv_canary unit + single-GPU canary e2e tests
 #   - 1-gpu-large: single-GPU model e2e tests (quant fp8kv-triton,
@@ -45,7 +45,6 @@ on:
           - rocm10
           - rocm724
           - rocm720
-          - rocm700
       aiter_ref:
         description: 'Override AITER commit (optional, leave empty to use Dockerfile default)'
         required: false

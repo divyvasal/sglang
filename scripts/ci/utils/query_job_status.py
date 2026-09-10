@@ -12,8 +12,8 @@ Usage:
 
     # Runner fleet report (cross-workflow runner analytics)
     python scripts/ci/utils/query_job_status.py --runner-report --workflow "pr-test-amd-rocm720.yml,nightly-test-amd-rocm720.yml" --hours 24
-    python scripts/ci/utils/query_job_status.py --runner-report --workflow "pr-test-amd.yml,nightly-test-amd.yml,pr-test-amd-rocm720.yml,nightly-test-amd-rocm720.yml" --summary
-    python scripts/ci/utils/query_job_status.py --workflow "pr-test-amd.yml,nightly-test-amd.yml,pr-test-amd-rocm720.yml,nightly-test-amd-rocm720.yml" --dump-data-file actions-job-snapshot.json
+    python scripts/ci/utils/query_job_status.py --runner-report --workflow "pr-test-amd-rocm720.yml,nightly-test-amd-rocm720.yml,nightly-amd-mi355x-disagg.yml" --summary
+    python scripts/ci/utils/query_job_status.py --workflow "pr-test-amd-rocm720.yml,nightly-test-amd-rocm720.yml,nightly-amd-mi355x-disagg.yml" --dump-data-file actions-job-snapshot.json
 
 Requirements:
     pip install tabulate

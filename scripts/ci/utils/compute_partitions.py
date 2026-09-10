@@ -33,7 +33,7 @@ _spec.loader.exec_module(_ci_register)
 collect_tests = _ci_register.collect_tests
 HWBackend = _ci_register.HWBackend
 
-# pr-test-amd.yml / pr-test-npu.yml have their own dispatch.
+# pr-test-amd-rocm720.yml / pr-test-npu.yml have their own dispatch.
 _TARGET_BACKENDS = {HWBackend.CUDA, HWBackend.CPU}
 
 # Single-shard sanity gate on the critical path; pinned rather than sized
